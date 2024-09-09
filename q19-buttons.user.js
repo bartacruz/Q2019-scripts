@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         q19 buttons
-// @namespace    http://tampermonkey.net/
-// @version      2024-09-09.04
-// @description  Buttons for quarantine 2019
+// @namespace    https://github.com/bartacruz/q19-buttons
+// @version      2024-09-09.05
+// @description  Buttons for Quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
 // @icon         https://play.quarantine2019.com/favicon.ico
 // @grant        none
-// require http://code.jquery.com/jquery-latest.js
+// require       https://code.jquery.com/jquery-latest.js
 // ==/UserScript==
 
 
@@ -84,7 +84,7 @@ function playerIcon(item,key) {
 
 (function() {
     $q = window.jQuery;
-    console.log("q19 buttons loaded");
+    console.log("q19 buttons loaded", $q);
     var fa = document.createElement("link");
     fa.rel = "stylesheet";
     fa.type="text/css";
