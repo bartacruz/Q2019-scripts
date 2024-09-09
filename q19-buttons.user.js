@@ -78,7 +78,7 @@ function playerIcon(item,key) {
     var icon = addIcon(li,icons[key]);
     icon.attr("title",title);
     console.debug("icon",icon);
-    plink.append(li);
+    return li;
 }
 
 (function() {
@@ -115,7 +115,7 @@ function playerIcon(item,key) {
 
                 if (title && title.length > 1 && keys.indexOf(title[1]) >=0) {
                     console.debug("item",keys.indexOf(title[1]) >=0, title,item);
-                    playerIcon(item,title[1]);
+                    plink.append(playerIcon(item,title[1]));
                 }
             });
         });
