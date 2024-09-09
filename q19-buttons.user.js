@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         q19 buttons
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-09.01
+// @version      2024-09-09.02
 // @description  Buttons for quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
@@ -10,6 +10,7 @@
 // ==/UserScript==
 // require http://code.jquery.com/jquery-latest.js
 
+var $q;
 function addIcon(i, name, prepend) {
     var icon;
     if(prepend) {
@@ -81,7 +82,7 @@ function playerIcon(item,key) {
 }
 
 (function() {
-    var $q = window.jQuery;
+    $q = window.jQuery;
     var fa = document.createElement("link");
     fa.rel = "stylesheet";
     fa.type="text/css";
