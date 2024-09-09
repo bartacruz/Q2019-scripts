@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         q19 buttons
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-09.02
+// @version      2024-09-09.03
 // @description  Buttons for quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
@@ -11,6 +11,7 @@
 // require http://code.jquery.com/jquery-latest.js
 
 var $q;
+
 function addIcon(i, name, prepend) {
     var icon;
     if(prepend) {
@@ -77,12 +78,12 @@ function playerIcon(item,key) {
     li.text("");
     var icon = addIcon(li,icons[key]);
     icon.attr("title",title);
-    console.debug("icon",icon);
     return li;
 }
 
 (function() {
     $q = window.jQuery;
+    console.log("q19 buttons loaded");
     var fa = document.createElement("link");
     fa.rel = "stylesheet";
     fa.type="text/css";
@@ -96,8 +97,6 @@ function playerIcon(item,key) {
     var rx = /player_(.*)_menu/;
     var rtitle = /(.*)\s+\(.*\)/;
     $q("ul[id*='player_']").each( (index,plm) => {
-        console.debug(plm.id,plm);
-
         var playerMenus = $q(plm);
         var pid = rx.exec(plm.id)[1];
         var plink = $q("#player_"+pid+"_menulink");
@@ -107,14 +106,11 @@ function playerIcon(item,key) {
   
         playerMenus.each( (index,pm) => {
             var playerMenu=$q(pm);
-            console.debug("playerMenu",index,pm, playerMenu);
             var items = playerMenu.find("a").not(".popupitemdisabled");
             items.each((index,i) => {
                 var item = $q(i);
                 var title = rtitle.exec(item.text());
-
                 if (title && title.length > 1 && keys.indexOf(title[1]) >=0) {
-                    console.debug("item",keys.indexOf(title[1]) >=0, title,item);
                     plink.append(playerIcon(item,title[1]));
                 }
             });
