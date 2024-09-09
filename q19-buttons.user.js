@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         q19 buttons
 // @namespace    http://tampermonkey.net/
-// @version      2024-09-09.03
+// @version      2024-09-09.04
 // @description  Buttons for quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
 // @icon         https://play.quarantine2019.com/favicon.ico
 // @grant        none
-// ==/UserScript==
 // require http://code.jquery.com/jquery-latest.js
+// ==/UserScript==
+
 
 var $q;
 
