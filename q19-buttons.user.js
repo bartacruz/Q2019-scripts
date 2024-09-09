@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         q19 buttons
 // @namespace    https://github.com/bartacruz/q19-buttons
-// @version      2024-09-09.05
+// @version      2024-09-09.06
 // @description  Buttons for Quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
 // @icon         https://play.quarantine2019.com/favicon.ico
 // @grant        none
-// require       https://code.jquery.com/jquery-latest.js
+// @require       https://code.jquery.com/jquery-latest.js
 // ==/UserScript==
 
 
