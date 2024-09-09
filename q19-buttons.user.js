@@ -4,7 +4,7 @@
 // @version      2024-09-09.01
 // @description  Buttons for quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
-// @match        http*://play.quarantine2019.com/game
+// @match        https://play.quarantine2019.com/game
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=quarantine2019.com
 // @grant        none
 // ==/UserScript==
