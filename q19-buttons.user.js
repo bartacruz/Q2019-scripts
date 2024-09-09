@@ -5,7 +5,7 @@
 // @description  Buttons for quarantine 2019
 // @author       Julio Santa Cruz <bartacruz@gmail.com>
 // @match        https://play.quarantine2019.com/game
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=quarantine2019.com
+// @icon         https://play.quarantine2019.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 // require http://code.jquery.com/jquery-latest.js
